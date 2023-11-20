@@ -2,8 +2,6 @@
 
 import API_KEY from "./apikey.js"
 
-console.log(API_KEY)
-
 const movieListEl = document.getElementById(`movie-list`)
 const movieItemEl = document.getElementById(`movie-item`)
 const formBoxEl = document.getElementById(`form-box`)
