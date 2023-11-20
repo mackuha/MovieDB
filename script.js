@@ -1,6 +1,8 @@
 "use strict"
 
-require(`dotenv`).config()
+import API_KEY from "./apikey.js"
+
+console.log(API_KEY)
 
 const movieListEl = document.getElementById(`movie-list`)
 const movieItemEl = document.getElementById(`movie-item`)
@@ -47,7 +49,7 @@ formBoxEl.addEventListener(`submit`, function (e) {
 })
 
 async function renderMovies(searchInput) {
-  const response = await fetch(`http://www.omdbapi.com/?s=${searchInput}&apikey=${process.env.API_KEY}`)
+  const response = await fetch(`http://www.omdbapi.com/?s=${searchInput}&apikey=${API_KEY}`)
   const data = await response.json()
 
   const searchResults = data.Search

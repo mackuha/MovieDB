@@ -1,6 +1,6 @@
 "use strict"
 
-require(`dotenv`).config()
+import API_KEY from "./apikey.js"
 
 const singleMovieEl = document.getElementById(`single-movie-container`)
 const searchFormHeader = document.getElementById(`search-form-header`)
@@ -48,7 +48,7 @@ function addToWatchlist(movieItemToAdd) {
 }
 
 async function renderSuggestions(searchInput) {
-  const response = await fetch(`https://www.omdbapi.com/?s=${searchInput}&apikey=${process.env.API_KEY}`)
+  const response = await fetch(`https://www.omdbapi.com/?s=${searchInput}&apikey=${API_KEY}`)
   const data = await response.json()
 
   const searchResults = data.Search
@@ -81,7 +81,7 @@ async function renderSuggestions(searchInput) {
 }
 
 async function renderSingleMovie(storedMovieId) {
-  const response = await fetch(`https://www.omdbapi.com/?i=${storedMovieId}&plot=full&apikey=${process.env.API_KEY}`)
+  const response = await fetch(`https://www.omdbapi.com/?i=${storedMovieId}&plot=full&apikey=${API_KEY}`)
   const data = await response.json()
 
   const posterImg = data.Poster !== `N/A` ? data.Poster : `images/no-poster.png`

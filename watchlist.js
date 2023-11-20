@@ -1,6 +1,6 @@
 "use strict"
 
-require(`dotenv`).config()
+import API_KEY from "./apikey.js"
 
 const searchFormHeader = document.getElementById(`search-form-header`)
 const searchInputEl = document.getElementById(`search-input`)
@@ -35,7 +35,7 @@ async function renderWatchlist() {
 
   if (watchlistArray.length > 0) {
     for (let id of watchlistArray) {
-      const response = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=${process.env.API_KEY}`)
+      const response = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=${API_KEY}`)
       const data = await response.json()
 
       const posterImg = data.Poster !== `N/A` ? data.Poster : `images/no-poster.png`
@@ -74,7 +74,7 @@ searchFormHeader.addEventListener(`submit`, function (e) {
 })
 
 async function renderSuggestions(searchInput) {
-  const response = await fetch(`https://www.omdbapi.com/?s=${searchInput}&apikey=${process.env.API_KEY}`)
+  const response = await fetch(`https://www.omdbapi.com/?s=${searchInput}&apikey=${API_KEY}`)
   const data = await response.json()
 
   const searchResults = data.Search

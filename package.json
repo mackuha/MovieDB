@@ -1,5 +1,12 @@
 {
-  "dependencies": {
-    "dotenv": "^16.3.1"
-  }
+  "name": "moviedb",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
