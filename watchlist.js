@@ -1,6 +1,6 @@
 "use strict"
 
-require(`dotenv`).config
+require(`dotenv`).config()
 
 const searchFormHeader = document.getElementById(`search-form-header`)
 const searchInputEl = document.getElementById(`search-input`)

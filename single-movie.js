@@ -1,6 +1,6 @@
 "use strict"
 
-require(`dotenv`).config
+require(`dotenv`).config()
 
 const singleMovieEl = document.getElementById(`single-movie-container`)
 const searchFormHeader = document.getElementById(`search-form-header`)

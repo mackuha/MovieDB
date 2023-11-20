@@ -1,6 +1,6 @@
 "use strict"
 
-require(`dotenv`).config
+require(`dotenv`).config()
 
 const movieListEl = document.getElementById(`movie-list`)
 const movieItemEl = document.getElementById(`movie-item`)
