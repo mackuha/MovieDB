@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <title>MovieDB</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+    <header class="section-header sub-page">
+      <div class="container container--wide">
+        <nav class="navigation">
+          <a href="index.html" class="logo"><img src="images/logo-moviedb.png" alt="MovieDB logo" /></a>
+          <form class="search-box-header" id="search-form-header">
+            <div class="input-container">
+              <input type="text" placeholder="Find your film" class="search-box" id="search-input" required />
+              <button class="btn-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div class="movie-dropdown-container" id="movie-dropdown-container">
+              <ul class="movie-dropdown-list" id="movie-dropdown-list"></ul>
+            </div>
+            <p class="no-results-popup" id="no-results-popup">Movie doesn't exist!</p>
+          </form>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="watchlist.html">Watchlist</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="section-single-movie">
+      <div class="container single-movie-container" id="single-movie-container"></div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+      <p>
+        Designed and coded by
+        <a href="https://github.com/mackuha" target="_blank">Marc Fernand Dimacuha</a>
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/1dac685c1b.js" crossorigin="anonymous"></script>
+    <script src="single-movie.js" type="module"></script>
+  </body>
+</html>

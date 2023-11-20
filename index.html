@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <title>MovieDB</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+    <header class="section-header home">
+      <div class="container container--wide">
+        <nav class="navigation">
+          <a href="index.html" class="logo"><img src="images/logo-moviedb.png" alt="MovieDB logo" /></a>
+          <form class="search-box-header hidden">
+            <div class="input-container">
+              <input type="text" placeholder="Find your film" class="search-box" required />
+              <button class="btn-search">
+                <ion-icon name="search"></ion-icon>
+              </button>
+            </div>
+            <div class="movie-dropdown-container">
+              <ul class="movie-dropdown-list">
+                <li class="movie-dropdown-item">
+                  <img src="images/movie-poster.jpg" alt="Movie poster" />
+                  <div class="movie-item-data">
+                    <p class="text-small">Series</p>
+                    <h3>The Lord of the Rings: Fellowship of the Rings</h3>
+                    <ul>
+                      <li>2018</li>
+                      <li>&#9679;</li>
+                      <li>Fantasy</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </form>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="watchlist.html">Watchlist</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="section-hero">
+      <div class="container">
+        <h1>Effortlessly explore the cinematic universe</h1>
+        <p>Streamline your film exploration with MovieDB’s comprehensive movie finder.</p>
+      </div>
+    </section>
+
+    <!-- Main hero search box -->
+    <section class="section-search-box">
+      <div class="container">
+        <form class="search-box-body" id="form-box">
+          <div class="input-container">
+            <input type="text" placeholder="Find your film" class="search-box" id="search-box" required />
+            <button class="btn-search" id="btn-search" data-search="1234">
+              <i class="fa-solid fa-magnifying-glass no-pointer"></i>
+            </button>
+          </div>
+          <div class="movie-dropdown-container hidden" id="movie-dropdown">
+            <ul class="movie-dropdown-list">
+              <li class="movie-dropdown-item">
+                <img src="images/movie-poster.jpg" alt="Movie poster" />
+                <div class="movie-item-data">
+                  <p class="text-small">Series</p>
+                  <h3>The Lord of the Rings: Fellowship of the Rings</h3>
+                  <ul>
+                    <li>2018</li>
+                    <li>&#9679;</li>
+                    <li>Fantasy</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Movie list -->
+    <main class="section-movie-list">
+      <div class="container">
+        <ul class="movie-list" id="movie-list">
+          <li class="no-results">
+            <img src="images/logo-moviedb-gray.png" alt="MovieDB logo mark" />
+            <h2>Search for your favorite movie or series...</h2>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+      <p>
+        Designed and coded by
+        <a href="https://github.com/mackuha" target="_blank">Marc Fernand Dimacuha</a>
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/1dac685c1b.js" crossorigin="anonymous"></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
